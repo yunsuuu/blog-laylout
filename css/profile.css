@@ -1,0 +1,32 @@
+
+.profile {
+    width: 200px; display: block; margin: auto;
+}
+
+.title {
+    font-size: 26px; font-family: 'nanumsquare'; text-align: center;
+}
+
+.special {
+    font-size: 16px;
+    text-align: center;
+}
+
+p {
+    font-size: 10px;
+}
+
+.description {
+    width: 400px;
+    /* height: 100px; */
+    background-color: #518C62;
+    margin: 50px;
+    padding: 30px;
+    /* border: 3px solid red; */
+    color: white;
+    font-size: 15px;
+    /* 가운데정렬 */
+    display: block;
+    margin: auto;
+    border-radius: 5px;
+}
