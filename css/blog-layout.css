@@ -1,7 +1,10 @@
 /* 초기화 코드 */
-body, h1, h4, ul, li {
+body, h1, h2, h4, ul, li, p {
     margin: 0;
     padding: 0;
+}
+body {
+    height: 3000px;
 }
 
 /* 헤더 */
@@ -12,96 +15,136 @@ body, h1, h4, ul, li {
     margin: auto;
     position: relative;
 }
-
 .li-inline {
     /* border: 3px solid red; */
     display: flex;
-    width: 60%;
-    height: 50px;
+    max-width: 1000px;
+    height: 60px;
     justify-content: space-around;
     align-items: center;
     margin: 0 auto;
+    /* font-weight: 600; */
 }
-
 .li-inline li {
     /* border: 3px solid rebeccapurple; */
     display: inline-block;
     text-align: center;
     font-size: 20px;
 }
-
-/* 링크 같은 거 하단 밑줄 삭제 */
+/* 링크 하단 밑줄 삭제 */
 .li-inline a {
     text-decoration: none;
 }
-
 .li-inline a:visited {
     color: black;
 }
 
-
 /* section1 - 메인비주얼 */
 .main-background {
     width: 100%;
-    height: 800px;
-    background-image: url(/images/carol.jpg);
+    height: 900px;
+    background-image: url(../images/carol.jpg);
     background-repeat: no-repeat;
     /* background-size: 100%; */
     background-size: cover;
     /* 반응형 웹에서 많이 사용 */
     background-position: center;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
+    padding: 1px;
+    /* 마진 들어간 div끼리 붙었을 때 padding 1이라도 주면 margin 먹음 */
+    position: relative;
+}
+.main-title-box {
+    /* border: 2px solid red; */
+    max-width: 800px;
+    /* height: 200px; */
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+    margin: 0 auto;
+    margin-top: 500px;
+}
+.main-title-box h2 {
+    font-size: 80px;
+}
+.main-title-box p {
+    font-size: 20px;
+}
+.main-button {
+    width: fit-content;
+    padding: 8px;
+    /* display: block 요소들만 margin: 0 auto 적용 */
+    display: block;
+    margin: 0 auto;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    cursor: pointer;
 }
 
-
-
-
-/* blog-layout */
-h4, p {
-    margin: 0;
-    padding: 0;
+.explain-box {
+    /* border: 2px solid red; */
+    width: 60%;
+    max-width: 800px;
+    height: fit-content;
+    background-color:seashell;
+    padding: 30px;
+    margin: 0 auto;
+    position: relative;
+    top: -90px;
 }
-.section2 {
-    /* border: 3px solid green; */
-    width: 800px;
-    margin: auto;
-    /* margin-top: 50px; */
+.explain-title-box {
+    text-align: center;
 }
 
+/* section2 - blog-layout */
+.article {
+    /* border: 2px solid blue; */
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+}
 .blog-content {
-    /* border: 3px solid blue; */
+    /* border: 3px solid red; */
     width: 70%;
     height: 200px;
-    margin: 20px;
-    /* background-color:darksalmon; */
-    float: left;
+    /* margin: 20px; */
+    /* float: left; */
+    display: inline-block;
 }
-
-
 .blog-profile {
     /* border: 3px solid orange; */
     /* float: left; */
     margin-left: 10px;
 }
-
 .blog-pic {
     /* border: 3px solid red; */
     width: 40px;
     margin-right: 10px;
     float: left;
 }
-
 .blog-title {
     /* border: 3px solid red; */
     margin-left: 10px;
     clear: both;
 }
-
+.blog-title h4 {
+    font-size: 20px;
+    padding: 8px 0;
+}
+.blog-title p {
+    font-size: 18px;
+    line-height: 27px;
+}
 .blog-image {
-    /* border: 3px solid red; */
-    width: 20%;
-    height: 200px;
-    margin-top: 40px;
-    float: right;
-        /* background-color: grey; */
+    /* border: 3px solid green; */
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    /* float: left; */
+    /* background-color: grey; */
 }

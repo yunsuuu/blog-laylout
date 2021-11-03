@@ -25,16 +25,25 @@
 
 <!-- section1 -->
     <div class="main-background">
-        
+        <div class="main-title-box">
+            <h2>Carol</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti, harum ducimus odit eveniet fugiat vel a dolorem.</p>
+        </div>
+        <button class="main-button">view more</button>
     </div>
 
+    <div class="explain-box">
+        <div class="explain-title-box">
+        <h3>영화 'Carol'의 자세한 리뷰가 궁금하다면?</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt, atque aliquam at adipisci distinctio facilis numquam laborum iste hic nisi dignissimos cupiditate, dolores illo corrupti officiis provident aliquid quae praesentium!</p>
+        </div>
+    </div>
 
 <!-- section2 -->
-    <div class="section2">
-        <!-- content1 -->
+    <div class="article">
         <div class="blog-content">
             <div class="blog-profile">
-                <img src="./images/carol.jpg" class="blog-pic">
+                <img src="./images/carol_circle.png" class="blog-pic">
                 <h4 style="font-size: 15px;">윤수빈</h4>
                 <p style="font-size: 13px;">1시간 전 발행</p>
             </div>
@@ -50,8 +59,8 @@
         <div class="blog-image">
             <img src="./images/carol2.png" width="100%">
         </div>
-
-        <!-- content2 -->
+    </div>
+    <div class="article">
         <div class="blog-content">
             <div class="blog-profile">
                 <img src="./images/carol_circle.png" class="blog-pic">
@@ -59,6 +68,7 @@
                 <p style="font-size: 13px;">1시간 전 발행</p>
             </div>
             <div style="clear: both"></div>
+            <!-- 아래 h4에 마진을 아무리 줘도 변화가 없을 때 div 태그 추가해서 clear: both 해주면 마진 적용됨 (블럭 역할) -->
             <div class="blog-title">
                 <h4 style="margin-top: 25px;">[Review] Carol</h4>
                 <p style="margin-top:8px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quis,
@@ -70,10 +80,17 @@
             <img src="./images/carol2.png" width="100%">
         </div>
     </div>
-  </div>
-    
-    
 
+    <!-- form & input -->
+    <form>
+        <input type="text" placeholder="검색어를 입력하세요">
+        <select>
+            <option>aaa</option>
+            <option>bbb</option>
+            <option>ccc</option>
+        </select>
+        <textarea rows="5"></textarea>
+    </form>
 </body>
 
 </html>
