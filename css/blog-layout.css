@@ -1,32 +1,80 @@
-/* 초기화 코드 */
+/* 폰트 정의 */
+
+/* 구글폰트에서 css 파일 가지고 와도 됨 */
+/* @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap'); */
+
+@font-face {
+    font-family: '멋진폰트';
+    src: url(../font/Nanumsquare/NanumSquareR.ttf);
+}
+
+/* 초기화코드 */
 body, h1, h2, h4, ul, li, p {
     margin: 0;
     padding: 0;
 }
+
+/* 공통태그 */
 body {
-    height: 3000px;
+    height: 4000px;
+    font-family: '멋진폰트';
+}
+div, input, textarea {
+    box-sizing: border-box;
+}
+.blind {
+    display: none;
 }
 
 /* 헤더 */
-.navbar {
-    /* border: 3px solid red; */
+#nav1 {
+    /* border: 1px solid blue; */
     width: 100%;
     height: 60px;
-    margin: auto;
-    position: relative;
-}
-.li-inline {
-    /* border: 3px solid red; */
-    display: flex;
-    max-width: 1000px;
-    height: 60px;
-    justify-content: space-around;
-    align-items: center;
     margin: 0 auto;
-    /* font-weight: 600; */
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    margin: 0;
+    margin-left: 30px;
+    padding: 0;
+    display: block;
+    width: 100px;
+    height: 35px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(../images/logo_black.svg);
+}
+.utility-icon {
+    text-align: right;
+    margin-right: 20px;
+}
+.utility-icon li {
+    display: inline;
+    margin: 0 5px;
+}
+.utility-icon li img {
+    width: 20px;
+}
+#nav2 {
+    /* border: 3px solid red; */
+    width: 100%;
+    max-width: 800px;
+    height: 50px;
+    margin: 0 auto;
+}
+#nav2 .li-inline {
+    /* border: 3px solid green; */
+    display: flex;
+    line-height: 40px;
+    justify-content: space-between;
+    align-items: center;
 }
 .li-inline li {
-    /* border: 3px solid rebeccapurple; */
+    /* border: 3px solid blue; */
     display: inline-block;
     text-align: center;
     font-size: 20px;
@@ -64,10 +112,11 @@ body {
     margin: 0 auto;
     margin-top: 500px;
 }
-.main-title-box h2 {
+.main-title {
     font-size: 80px;
+    text-align: center;
 }
-.main-title-box p {
+.main-content {
     font-size: 20px;
 }
 .main-button {
@@ -78,6 +127,7 @@ body {
     margin: 0 auto;
     background-color: transparent;
     border: 1px solid #fff;
+    /* border-radius: 4px; */
     color: #fff;
     cursor: pointer;
 }
@@ -102,7 +152,6 @@ body {
     /* border: 2px solid blue; */
     width: 80%;
     margin: 0 auto;
-    margin-bottom: 100px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -148,3 +197,97 @@ body {
     /* float: left; */
     /* background-color: grey; */
 }
+
+.form-white h3 {
+    margin-left: 20px;
+}
+.form-white p {
+    padding: 10px;
+}
+.form-background {
+    width: 100%;
+    /* height: 500px; */
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    margin: 80px 0;
+    box-sizing: border-box;
+}
+.form-white {
+    width: 90%;
+    max-width: 700px;
+    padding: 20px;
+    background-color: #fff;
+    margin: 0 auto;
+}
+.form-input {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 4px;
+    border: 1px solid lightgrey;
+}
+.form-whole {
+    padding: 20px;
+}
+.form-half {
+    width: 50%;
+    float: left;
+    padding: 0 20px;
+}
+.form-submit {
+    width: 200px;
+    height: 30px;
+    line-height: 8px;
+    font-size: 18px;
+    color: #fff;
+    padding: 10px;
+    margin: 10px 20px 0 auto;
+    border-radius: 4px;
+    border: none;
+    background-color: lightsalmon;
+    display: block;
+}
+.flex-text-container {
+    /* border: 2px solid blue; */
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+.flex-text-box {
+    width: 25%;
+    margin-top: 50px;
+    float: left;
+}
+.flex-text-box h4 {
+    margin-bottom: 20px;
+}
+
+
+/* breakpoint */
+@media screen and (max-width: 992px) {
+    .main-title {
+        font-size: 60px;
+    }
+    .flex-text-container {
+        max-width: 800px;
+    }
+    .flex-text-box {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-title {
+        font-size: 40px;
+    }
+    /* .flex-text-container {
+        display: flex;
+        flex-direction: column;
+        세로로 나란히
+    } */
+    .flex-text-box {
+        float: none;
+        width: 100%;
+    }
+}
+

@@ -1,0 +1,14 @@
+.flex-container {
+    background-color: gray;
+    height: 300px;
+    align-items: center;
+    display: flex;
+    justify-content: center ;
+    flex-direction: row;
+}
+.flex-box {
+    width: 100px;
+    height: 100px;
+    background-color: cornflowerblue;
+    margin: 5px;
+}
