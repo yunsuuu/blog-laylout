@@ -7,155 +7,204 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>blog-layout</title>
     <link rel="stylesheet" href="./css/blog-layout.css">
+    <link rel="stylesheet" href="./font/fa/css/all.css">
 </head>
 
 <body>
+
 <!-- nav, section, footer 등을 싸매는 큰 div 하나 만들어주면 좋음 -->
-  
-  <div class="container">
-      <!-- header -->
-      <div class="header">
-            <div id="nav1">
-                <h1 class="logo"><a href="#"><span class="blind">씨네21</span></a></h1>
-               <div class="utility-icon-wrap">
-                <ul class="utility-icon">
-                    <li class="icon-img"><img src="./images/info.svg" alt="회사정보"></li>
-                    <li class="icon-img"><img src="./images/user.svg" alt="로그인" style="margin-bottom: 2px;"></li>
-                    <li class="icon-img"><img src="./images/heart.svg" alt="좋아요"></li>
-                </ul>
-               </div>
-            </div>
-            <div id="nav2" class="nav2-background">
-                <ul class="li-inline">
-                    <li><a href="#">daily</a></li>
-                    <li><a href="#">favorite</a></li>
-                    <li><a href="#">review</a></li>
-                    <li><a href="#">archive</a></li>
-                </ul>
+<div class="container">
+    <!-- side-navbar -->
+    <nav class="sideNavbar">
+        <h4>MENU</h4>
+        <p class="navbar-item">menu item</p>
+    </nav>
+
+    <!-- header -->
+    <div class="header">
+        <div id="nav1">
+            <h1 class="logo"><a href="#"><span class="blind">씨네21</span></a></h1>
+            <div class="utility-icon-wrap">
+            <ul class="utility-icon">
+                <li class="icon-img"><img src="./images/info.svg" alt="회사정보"></li>
+                <li class="icon-img"><img src="./images/user.svg" alt="로그인" style="margin-bottom: 2px;"></li>
+                <li class="icon-img"><img src="./images/heart.svg" alt="좋아요"></li>
+            </ul>
             </div>
         </div>
-
-        <!-- section1 -->
-        <div class="main-background">
-            <div class="main-title-box">
-                <h2 class="main-title">Carol</h2>
-                <p class="main-content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti, harum ducimus odit eveniet fugiat vel a dolorem.</p>
-            </div>
-            <button class="main-button">view more</button>
-        </div>
-        <div class="explain-box">
-            <div class="explain-title-box">
-            <h3>영화 'Carol'의 자세한 리뷰가 궁금하다면?</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt, atque aliquam at adipisci distinctio facilis numquam laborum iste hic nisi dignissimos cupiditate, dolores illo corrupti officiis provident aliquid quae praesentium!</p>
-            </div>
-        </div>
-
-        <!-- section2 -->
-        <div class="article">
-            <div class="blog-content">
-                <div class="blog-profile">
-                    <img src="./images/carol_circle.png" class="blog-pic">
-                    <h4 style="font-size: 15px;">윤수빈</h4>
-                    <p style="font-size: 13px;">1시간 전 발행</p>
-                </div>
-                <div style="clear: both"></div>
-                <!-- 아래 h4에 마진을 아무리 줘도 변화가 없을 때 div 태그 추가해서 clear: both 해주면 마진 적용됨 (블럭 역할) -->
-                <div class="blog-title">
-                    <h4 style="margin-top: 25px;">[Review] Carol</h4>
-                    <p style="margin-top:8px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quis,
-                        delectus ratione odio voluptatum doloribus eum eos, nemo adipisci voluptates nihil sed beatae
-                        voluptas possimus corrupti quo. Deserunt, maxime porro!</p>
-                </div>
-            </div>
-            <div class="blog-image">
-                <img src="./images/carol2.png" width="100%">
-            </div>
-        </div>
-        <div class="article">
-            <div class="blog-content">
-                <div class="blog-profile">
-                    <img src="./images/carol_circle.png" class="blog-pic">
-                    <h4 style="font-size: 15px;">윤수빈</h4>
-                    <p style="font-size: 13px;">1시간 전 발행</p>
-                </div>
-                <div style="clear: both"></div>
-                <!-- 아래 h4에 마진을 아무리 줘도 변화가 없을 때 div 태그 추가해서 clear: both 해주면 마진 적용됨 (블럭 역할) -->
-                <div class="blog-title">
-                    <h4 style="margin-top: 25px;">[Review] Carol</h4>
-                    <p style="margin-top:8px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quis,
-                        delectus ratione odio voluptatum doloribus eum eos, nemo adipisci voluptates nihil sed beatae
-                        voluptas possimus corrupti quo. Deserunt, maxime porro!</p>
-                </div>
-            </div>
-            <div class="blog-image">
-                <img src="./images/carol2.png" width="100%">
-            </div>
-        </div>
-
-        <!-- form & input -->
-        <!-- <form>
-            <input type="text" placeholder="검색어를 입력하세요" class="sample-input">
-            <select>
-                <option>aaa</option>
-                <option>bbb</option>
-                <option>ccc</option>
-            </select>
-            <textarea rows="5"></textarea>
-            <input type="submit" value="보내기">
-            <button type="submit">보내기</button>
-        </form> -->
-
-        <div class="form-background">
-            <div class="form-white">
-                <h3>contact me</h3>
-                <form>
-                    <div class="form-whole">
-                        <p>Your Email</p>
-                        <input type="email" class="form-input">
-                    </div>
-                    <div class="form-half">
-                        <p>First name</p>
-                        <input type="text" class="form-input">
-                    </div>
-                    <div class="form-half">
-                        <p>Last name</p>
-                        <input type="text" class="form-input">
-                    </div>
-                    <!-- float:left 사용했을 때 clear:both는 필수 -->
-                    <div style="clear: both;"></div>
-
-                    <div class="form-whole">
-                        <p>Message</p>
-                        <textarea rows="10" class="form-input"></textarea>
-                    </div>
-                    <div class="form-whole">
-                        <input type="checkbox" id="check"> <label for="check">Subscribe</label>
-                    </div>
-                    <!-- input & label에 각각 id, for로 check라는 속성을 주면 텍스트 클릭해도 체크박스 표시 -->
-                    <button type="submit" class="form-submit">SEND</button>
-                </form>
-            </div>
+        <div id="nav2" class="nav2-background">
+            <ul class="li-inline">
+                <li><a href="#">daily</a></li>
+                <li><a href="#">favorite</a></li>
+                <li><a href="#">review</a></li>
+                <li><a href="#">archive</a></li>
+            </ul>
         </div>
     </div>
 
+    <!-- section1 -->
+    <div class="main-background">
+        <div class="main-title-box">
+            <h2 class="main-title">Carol</h2>
+            <p class="main-content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti, harum ducimus odit eveniet fugiat vel a dolorem.</p>
+            <p class="custom">hello</p>
+        </div>
+        <button class="main-button">view more</button>
+    </div>
+    <div class="explain-box">
+        <div class="explain-title-box">
+        <h3>영화 'Carol'의 자세한 리뷰가 궁금하다면?</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt, atque aliquam at adipisci distinctio facilis numquam laborum iste hic nisi dignissimos cupiditate, dolores illo corrupti officiis provident aliquid quae praesentium!</p>
+        </div>
+    </div>
+
+    <!-- section2 -->
+    <div class="article">
+        <div class="blog-content">
+            <div class="blog-profile">
+                <img src="./images/carol_circle.png" class="blog-pic">
+                <h4 style="font-size: 15px;">윤수빈</h4>
+                <p style="font-size: 13px;">1시간 전 발행</p>
+            </div>
+            <div style="clear: both"></div>
+            <!-- 아래 h4에 마진을 아무리 줘도 변화가 없을 때 div 태그 추가해서 clear: both 해주면 마진 적용됨 (블럭 역할) -->
+            <div class="blog-title">
+                <h4 style="margin-top: 25px;">[Review] Carol</h4>
+                <p style="margin-top:8px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quis,
+                    delectus ratione odio voluptatum doloribus eum eos, nemo adipisci voluptates nihil sed beatae
+                    voluptas possimus corrupti quo. Deserunt, maxime porro!</p>
+            </div>
+        </div>
+        <div class="blog-image">
+            <img src="./images/carol2.png" width="100%">
+        </div>
+    </div>
+    <div class="article">
+        <div class="blog-content">
+            <div class="blog-profile">
+                <img src="./images/carol_circle.png" class="blog-pic">
+                <h4 style="font-size: 15px;">윤수빈</h4>
+                <p style="font-size: 13px;">1시간 전 발행</p>
+            </div>
+            <div style="clear: both">
+            </div>
+            <div class="blog-title">
+                <h4 style="margin-top: 25px;">[Review] Carol</h4>
+                <p style="margin-top:8px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quis,
+                    delectus ratione odio voluptatum doloribus eum eos, nemo adipisci voluptates nihil sed beatae
+                    voluptas possimus corrupti quo. Deserunt, maxime porro!</p>
+            </div>
+        </div>
+        <div class="blog-image">
+            <img src="./images/carol2.png" width="100%">
+        </div>
+    </div>
+
+    <!-- section3 -->
     <div class="flex-text-container">
         <div class="flex-text-box">
+            <i class="fas fa-shopping-cart fa-3x" style="margin-bottom: 20px;"></i>
             <h4>Fast Shipping</h4>
             <p>We ship 90% faster than any other services</p>
         </div>
         <div class="flex-text-box">
+            <i class="fas fa-shopping-cart fa-3x" style="margin-bottom: 20px;"></i>
             <h4>Fast Shipping</h4>
             <p>We ship 90% faster than any other services</p>
         </div>
         <div class="flex-text-box">
+            <i class="fas fa-shopping-cart fa-3x" style="margin-bottom: 20px;"></i>
             <h4>Fast Shipping</h4>
             <p>We ship 90% faster than any other services</p>
         </div>
         <div class="flex-text-box">
+            <i class="fas fa-shopping-cart fa-3x" style="margin-bottom: 20px;"></i>
             <h4>Fast Shipping</h4>
             <p>We ship 90% faster than any other services</p>
+        </div>
+        <div style="clear: both;"></div>
+    </div>
+
+    <!-- section4 -->
+    <div class="product-background">
+        <div class="product-container">
+            <div class="product-item">
+                <div style="position: relative;">
+                    <div class="overlay"><p>15,000원</p></div>
+                    <!-- overlay = 상품 이미지 위를 덮는 검은 박스 -->
+                    <img src="./images/product.jpeg">
+                </div>
+            </div>
+
+            <div class="product-item">
+                <div style="position: relative;">
+                    <div class="wrap-overlayy">
+                        <div class="half-overlay">
+                            <p>15,000원</p>
+                        </div>
+                    </div>
+                    <img src="./images/product.jpeg">
+                </div>
+            </div>
+
+            <div class="product-item">
+                <div style="position: relative;">
+                    <div class="wrap-overlay">
+                        <div class="black-overlay">
+                            <p>15,000원</p>
+                        </div>
+                    </div>
+                    <img src="./images/product.jpeg">
+                </div>
+            </div>
+            <div style="clear: both;"></div>
         </div>
     </div>
+
+    <!-- animation test -->
+    <div class="ani-test">
+        <p>hello</p>
+    </div>
+
+    <div>
+        <button class="ani-btn">흔들버튼</button>
+    </div>
+
+    <div class="ani-x">+</div>
+        
+    <!-- input&button -->
+    <div class="form-background">
+        <div class="form-white">
+            <h3>contact me</h3>
+            <form>
+                <div class="form-whole">
+                    <p>Your Email</p>
+                    <input type="email" class="form-input">
+                </div>
+                <div class="form-half">
+                    <p>First name</p>
+                    <input type="text" class="form-input">
+                </div>
+                <div class="form-half">
+                    <p>Last name</p>
+                    <input type="text" class="form-input">
+                </div>
+                <!-- float:left 사용했을 때 clear:both는 필수 -->
+                <div style="clear: both;"></div>
+                <div class="form-whole">
+                    <p>Message</p>
+                    <textarea rows="10" class="form-input"></textarea>
+                </div>
+                <div class="form-whole">
+                    <input type="checkbox" id="check"> <label for="check">Subscribe</label>
+                </div>
+                <!-- input & label에 각각 id, for로 check라는 속성을 주면 텍스트 클릭해도 체크박스 표시 -->
+                <button type="submit" class="form-submit">SEND</button>
+            </form>
+        </div>
+    </div>
+</div>
+
 </body>
 
 </html>

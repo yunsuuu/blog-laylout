@@ -26,7 +26,34 @@ div, input, textarea {
     display: none;
 }
 
-/* 헤더 */
+/* sidenavber */
+.sideNavbar {
+    width: 300px;
+    height: 100%;
+    background-color:antiquewhite;
+    color: #000;
+    padding: 25px;
+    position: fixed;
+    text-align: right;
+    z-index: 5;
+    transition: all 1s;
+    transform: translateX(-250px);
+}
+.navbar-item {
+    /* text-align: left; */
+    transform: translateX(-400px);
+    padding: 20px;
+}
+.sideNavbar:hover {
+    transform: translateX(0px);
+    text-align: center;
+}
+.sideNavbar:hover .navbar-item {
+    transform: translateX(0px);
+    transition: all 0.8s;
+}
+
+/* header */
 #nav1 {
     /* border: 1px solid blue; */
     width: 100%;
@@ -82,6 +109,10 @@ div, input, textarea {
 /* 링크 하단 밑줄 삭제 */
 .li-inline a {
     text-decoration: none;
+}
+/* 페이지 처음 열었을 때 link 컬러 고정 */
+.li-inline a:link {
+    color: #000;
 }
 .li-inline a:visited {
     color: black;
@@ -152,10 +183,10 @@ div, input, textarea {
     /* border: 2px solid blue; */
     width: 80%;
     margin: 0 auto;
+    padding: 30px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 50px;
 }
 .blog-content {
     /* border: 3px solid red; */
@@ -169,6 +200,9 @@ div, input, textarea {
     /* border: 3px solid orange; */
     /* float: left; */
     margin-left: 10px;
+}
+.blog-profile p {
+    margin-top: 4px;
 }
 .blog-pic {
     /* border: 3px solid red; */
@@ -194,23 +228,212 @@ div, input, textarea {
     width: 150px;
     height: 150px;
     display: inline-block;
-    /* float: left; */
-    /* background-color: grey; */
 }
-
+.flex-text-container {
+    /* border: 2px solid blue; */
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 80px;
+    text-align: center;
+}
+.flex-text-container i {
+    background-color: burlywood;
+    color: #fff;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding-top: 28px;
+    box-sizing: border-box;
+}
+.flex-text-box {
+    width: 25%;
+    margin-top: 50px;
+    float: left;
+}
+.flex-text-box h4 {
+    margin-bottom: 20px;
+}
+.product-background {
+    background-color:lightgray;
+    padding-top: 10px;
+    padding-bottom: 90px;
+    margin-top: 90px;
+}
+.product-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 90px;
+}
+.product-item {
+    /* border: 2px solid blue; */
+    float: left;
+    width: 33.3%;
+    padding: 60px;
+}
+.product-item img {
+    width: 100%;
+    /* 부모요소 사이즈에 꽉 차게 */
+}
+.overlay {
+    position: absolute;
+    /* 상품 이미지 위에 겹칠려면 붕 띄워야함 -> absolute 줌 */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: all .7s;
+}
+.overlay p {
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 50%;
+}
+.wrap-overlayy {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.half-overlay {
+    position: absolute;
+    width:0%;
+    height: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 50%;
+    opacity: 0;
+}
+.half-overlay p {
+    color: #fff;
+    font-size: 20px;
+}
+.wrap-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* 이미지와 겹쳐짐 */
+    overflow: hidden;
+    /* 부모요소에 overflow:hidden 주면 넘치는 요소 제거 */
+}
+.black-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    position: relative;
+    /* right: 100%; */
+    top: 100%;
+    opacity: 0; 
+    transition: all .7s;
+}
+.black-overlay p {
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+.overlay:hover {
+    opacity: 1;
+}
+.half-overlay:hover {
+    width: 100%;
+    opacity: 1;
+}
+.wrap-overlay:hover .black-overlay {
+    top: 50%;
+    /* right: 50%; */
+    opacity: 1;
+}
+.ani-test {
+    text-align: center;
+    font-size: 30px;
+    padding: 30px;
+}
+.ani-test:hover {
+    animation-name: test;
+    animation-duration: 1s;
+}
+@keyframes test {
+    0% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(-100px);
+    }
+    75% {
+        transform: translateX(100px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+.ani-btn {
+    padding: 20px;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    border-radius: 6px;
+    background-color: cornflowerblue;
+    color: #fff;
+    font-size: 16px;
+}
+.ani-btn:hover {
+    animation-name: shake;
+    animation-duration: 1s;
+}
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-8deg);
+    }
+    50% {
+        transform: rotate(8deg);
+    }
+    75% {
+        transform: rotate(-8deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+.ani-x {
+    width: 80px;
+    font-size: 70px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+    cursor: pointer;
+}
+.ani-x:hover {
+    animation-name: plusx;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes plusx {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-15deg);
+    }
+    100% {
+        transform: rotate(45deg) scale(1.5);
+    }
+}
+.form-background {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    margin-top: 90px;
+    box-sizing: border-box;
+}
 .form-white h3 {
     margin-left: 20px;
 }
 .form-white p {
     padding: 10px;
-}
-.form-background {
-    width: 100%;
-    /* height: 500px; */
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 30px;
-    margin: 80px 0;
-    box-sizing: border-box;
 }
 .form-white {
     width: 90%;
@@ -224,7 +447,7 @@ div, input, textarea {
     padding: 12px;
     font-size: 18px;
     border-radius: 4px;
-    border: 1px solid lightgrey;
+    border: 1px solid #f6f6f6;
 }
 .form-whole {
     padding: 20px;
@@ -247,22 +470,6 @@ div, input, textarea {
     background-color: lightsalmon;
     display: block;
 }
-.flex-text-container {
-    /* border: 2px solid blue; */
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-}
-.flex-text-box {
-    width: 25%;
-    margin-top: 50px;
-    float: left;
-}
-.flex-text-box h4 {
-    margin-bottom: 20px;
-}
-
-
 /* breakpoint */
 @media screen and (max-width: 992px) {
     .main-title {
